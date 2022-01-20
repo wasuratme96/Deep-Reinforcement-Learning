@@ -18,8 +18,11 @@ class Environment:
         if self.is_done():
             raise Exception("Game is over !!")
         self.steps_left -= 1
-        return random.random()
-
+        if action == 1:
+            return 1
+        else :
+            return random.random()
+            
 class Agent:
     def __init__(self):
         self.total_reward = 0.0
