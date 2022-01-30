@@ -14,4 +14,5 @@ if __name__ == '__main__':
     writer.close()
 
     # To make the tensorboardX display, use be script in CLI
-    # tensorboard --logdir runs
+    # tensorboard --logdir runs 
+    # Run this script in same directory with runs folder
