@@ -1,6 +1,7 @@
 import gym
-from collections import namedtuple
+import logging
 import numpy as np
+from collections import namedtuple
 from tensorboardX import SummaryWriter
 
 import torch
@@ -31,6 +32,9 @@ EpisodeStep
 '''
 Episode = namedtuple('Episode', field_names=['reward', 'steps'])
 EpisodeStep = namedtuple('EpisodeStep', field_names=['observation', 'action'])
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
+logger = logging.getLogger()
 
 # Action per batch loop
 def iterate_batches(env, net, batch_size):
